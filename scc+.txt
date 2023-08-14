@@ -1,0 +1,2391 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local SCCGUI = Instance.new("ScreenGui")
+local Tab = Instance.new("ImageLabel")
+local Playeri = Instance.new("TextButton")
+local Flight = Instance.new("TextButton")
+local Storage = Instance.new("TextButton")
+local Misc = Instance.new("TextButton")
+local Title = Instance.new("ImageLabel")
+local text = Instance.new("ImageLabel")
+local Entity = Instance.new("TextButton")
+local Playeri_2 = Instance.new("ImageLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Template = Instance.new("TextButton")
+local Viewbox = Instance.new("ImageLabel")
+local PName = Instance.new("TextLabel")
+local Coords = Instance.new("TextLabel")
+local Pfp = Instance.new("ImageLabel")
+local Tp = Instance.new("TextButton")
+local Mimic = Instance.new("TextButton")
+local Flight_2 = Instance.new("ImageLabel")
+local Toggle = Instance.new("TextButton")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local Storage_2 = Instance.new("ImageLabel")
+local Storage2 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Active2 = Instance.new("TextButton")
+local Badges = Instance.new("TextButton")
+local Copies = Instance.new("TextButton")
+local Equips = Instance.new("TextButton")
+local Dances = Instance.new("TextButton")
+local Passive = Instance.new("TextButton")
+local Toggles = Instance.new("TextButton")
+local Skins = Instance.new("TextButton")
+local Vanity = Instance.new("TextButton")
+local Potions = Instance.new("TextButton")
+local RareVanity = Instance.new("TextButton")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local getitem = Instance.new("ImageButton")
+local ViewportFrame = Instance.new("ViewportFrame")
+local inspector = Instance.new("ImageLabel")
+local Quantity = Instance.new("TextLabel")
+local Item = Instance.new("TextLabel")
+local qcheck = Instance.new("TextButton")
+local With = Instance.new("TextButton")
+local Desc = Instance.new("TextLabel")
+local stackdrop = Instance.new("TextButton")
+local stacksize = Instance.new("TextBox")
+local Frame = Instance.new("Frame")
+local UIGridLayout_3 = Instance.new("UIGridLayout")
+local Filter = Instance.new("TextButton")
+local Misc_2 = Instance.new("ImageLabel")
+local Prog = Instance.new("TextButton")
+local Nuke = Instance.new("TextButton")
+local Save = Instance.new("TextButton")
+local Reset = Instance.new("TextButton")
+local Load = Instance.new("TextButton")
+local heal = Instance.new("TextButton")
+local ShopFrame = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local Date = Instance.new("TextLabel")
+local ItemFrame = Instance.new("ImageLabel")
+local UIGridLayout_4 = Instance.new("UIGridLayout")
+local LoadFrame = Instance.new("ImageLabel")
+local Y = Instance.new("TextButton")
+local B = Instance.new("TextButton")
+local R = Instance.new("TextButton")
+local G = Instance.new("TextButton")
+local H = Instance.new("TextButton")
+local Toggle_2 = Instance.new("TextButton")
+local Entity_2 = Instance.new("ImageLabel")
+local KAE = Instance.new("TextButton")
+local Pickup = Instance.new("TextButton")
+local PickupF = Instance.new("TextButton")
+local Etog = Instance.new("TextButton")
+local ScrollingFrame_4 = Instance.new("ScrollingFrame")
+local UIGridLayout_5 = Instance.new("UIGridLayout")
+local inspector_2 = Instance.new("ImageLabel")
+local Enemy = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local UIGridLayout_6 = Instance.new("UIGridLayout")
+local Esp = Instance.new("TextButton")
+local Colorer = Instance.new("ImageLabel")
+local Color = Instance.new("TextLabel")
+local B_2 = Instance.new("ScrollingFrame")
+local G_2 = Instance.new("ScrollingFrame")
+local R_2 = Instance.new("ScrollingFrame")
+local Set = Instance.new("TextButton")
+local InviStorage = Instance.new("ImageLabel")
+local roundify = Instance.new("ImageLabel")
+
+--Properties:
+
+SCCGUI.Name = "SCCGUI"
+SCCGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Tab.Name = "Tab"
+Tab.Parent = SCCGUI
+Tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab.BackgroundTransparency = 1.000
+Tab.Position = UDim2.new(0, 40, 0, 90)
+Tab.Size = UDim2.new(0, 1505, 0, 118)
+Tab.Visible = false
+Tab.Image = "rbxassetid://3570695787"
+Tab.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Tab.ImageTransparency = 0.500
+Tab.ScaleType = Enum.ScaleType.Slice
+Tab.SliceCenter = Rect.new(100, 100, 100, 100)
+Tab.SliceScale = 0.120
+
+Playeri.Name = "Playeri"
+Playeri.Parent = Tab
+Playeri.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Playeri.BackgroundTransparency = 1.000
+Playeri.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Playeri.BorderSizePixel = 0
+Playeri.Position = UDim2.new(0.867421329, 0, 0.254237294, 0)
+Playeri.Size = UDim2.new(0, 171, 0, 57)
+Playeri.ZIndex = 10
+Playeri.Font = Enum.Font.Unknown
+Playeri.Text = "Player Viewer"
+Playeri.TextColor3 = Color3.fromRGB(255, 255, 255)
+Playeri.TextSize = 14.000
+
+Flight.Name = "Flight"
+Flight.Parent = Tab
+Flight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Flight.BackgroundTransparency = 1.000
+Flight.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Flight.BorderSizePixel = 0
+Flight.Position = UDim2.new(0.586397946, 0, 0.254237294, 0)
+Flight.Size = UDim2.new(0, 171, 0, 57)
+Flight.ZIndex = 10
+Flight.Font = Enum.Font.Unknown
+Flight.Text = "Flight"
+Flight.TextColor3 = Color3.fromRGB(255, 255, 255)
+Flight.TextSize = 14.000
+
+Storage.Name = "Storage"
+Storage.Parent = Tab
+Storage.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Storage.BackgroundTransparency = 1.000
+Storage.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Storage.BorderSizePixel = 0
+Storage.Position = UDim2.new(0.726531029, 0, 0.254237294, 0)
+Storage.Size = UDim2.new(0, 171, 0, 57)
+Storage.ZIndex = 10
+Storage.Font = Enum.Font.Unknown
+Storage.Text = "Storage"
+Storage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Storage.TextSize = 14.000
+
+Misc.Name = "Misc"
+Misc.Parent = Tab
+Misc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Misc.BackgroundTransparency = 1.000
+Misc.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(0.304617286, 0, 0.254237294, 0)
+Misc.Size = UDim2.new(0, 171, 0, 57)
+Misc.ZIndex = 10
+Misc.Font = Enum.Font.Unknown
+Misc.Text = "Misc"
+Misc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Misc.TextSize = 14.000
+
+Title.Name = "Title"
+Title.Parent = Tab
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0, -6, 0, -11)
+Title.Size = UDim2.new(0, 426, 0, 140)
+Title.Image = "rbxassetid://3570695787"
+Title.ImageColor3 = Color3.fromRGB(55, 55, 55)
+Title.ScaleType = Enum.ScaleType.Slice
+Title.SliceCenter = Rect.new(100, 100, 100, 100)
+Title.SliceScale = 0.120
+
+text.Name = "text"
+text.Parent = Title
+text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+text.BackgroundTransparency = 1.000
+text.Position = UDim2.new(0.150688484, 0, 0.181507334, 0)
+text.Size = UDim2.new(0, 297, 0, 89)
+text.Image = "rbxassetid://11817896266"
+
+Entity.Name = "Entity"
+Entity.Parent = Tab
+Entity.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Entity.BackgroundTransparency = 1.000
+Entity.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Entity.BorderSizePixel = 0
+Entity.Position = UDim2.new(0.44475016, 0, 0.254237294, 0)
+Entity.Size = UDim2.new(0, 171, 0, 57)
+Entity.ZIndex = 10
+Entity.Font = Enum.Font.Unknown
+Entity.Text = "Entity"
+Entity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Entity.TextSize = 14.000
+
+Playeri_2.Name = "Playeri"
+Playeri_2.Parent = SCCGUI
+Playeri_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Playeri_2.BackgroundTransparency = 1.000
+Playeri_2.Position = UDim2.new(0, 150, 0, 350)
+Playeri_2.Size = UDim2.new(0, 200, 0, 481)
+Playeri_2.Visible = false
+Playeri_2.Image = "rbxassetid://3570695787"
+Playeri_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Playeri_2.ImageTransparency = 0.500
+Playeri_2.ScaleType = Enum.ScaleType.Slice
+Playeri_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Playeri_2.SliceScale = 0.120
+
+ScrollingFrame.Parent = Playeri_2
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(-0.0983113125, 0, 0.0288569406, 0)
+ScrollingFrame.Size = UDim2.new(0, 209, 0, 455)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIGridLayout.Parent = ScrollingFrame
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 180, 0, 50)
+UIGridLayout.StartCorner = Enum.StartCorner.TopRight
+
+Template.Name = "Template"
+Template.Parent = ScrollingFrame
+Template.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Template.BackgroundTransparency = 1.000
+Template.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Template.BorderSizePixel = 0
+Template.Position = UDim2.new(0.172770441, 0, 0.0164203607, 0)
+Template.Size = UDim2.new(0, 150, 0, 45)
+Template.Visible = false
+Template.ZIndex = 10
+Template.Font = Enum.Font.Unknown
+Template.Text = ""
+Template.TextColor3 = Color3.fromRGB(255, 255, 255)
+Template.TextSize = 14.000
+
+Viewbox.Name = "Viewbox"
+Viewbox.Parent = Playeri_2
+Viewbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Viewbox.BackgroundTransparency = 1.000
+Viewbox.Position = UDim2.new(0, 224, 0, 0)
+Viewbox.Size = UDim2.new(0, 200, 0, 246)
+Viewbox.Image = "rbxassetid://3570695787"
+Viewbox.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Viewbox.ImageTransparency = 0.500
+Viewbox.ScaleType = Enum.ScaleType.Slice
+Viewbox.SliceCenter = Rect.new(100, 100, 100, 100)
+Viewbox.SliceScale = 0.120
+
+PName.Name = "PName"
+PName.Parent = Viewbox
+PName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PName.BackgroundTransparency = 1.000
+PName.Position = UDim2.new(-0.0035481262, 0, -0.000466199417, 0)
+PName.Size = UDim2.new(0, 200, 0, 50)
+PName.Font = Enum.Font.Unknown
+PName.Text = "Name"
+PName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PName.TextSize = 14.000
+PName.TextWrapped = true
+
+Coords.Name = "Coords"
+Coords.Parent = Viewbox
+Coords.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Coords.BackgroundTransparency = 1.000
+Coords.Position = UDim2.new(-0.0035481262, 0, 0.796281755, 0)
+Coords.Size = UDim2.new(0, 200, 0, 50)
+Coords.Font = Enum.Font.Unknown
+Coords.Text = "0, 0, 0"
+Coords.TextColor3 = Color3.fromRGB(255, 255, 255)
+Coords.TextSize = 14.000
+Coords.TextWrapped = true
+
+Pfp.Name = "Pfp"
+Pfp.Parent = Viewbox
+Pfp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pfp.BackgroundTransparency = 1.000
+Pfp.Position = UDim2.new(0.105000004, 0, 0.199186981, 0)
+Pfp.Size = UDim2.new(0, 158, 0, 158)
+Pfp.Visible = false
+Pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Tp.Name = "Tp"
+Tp.Parent = Viewbox
+Tp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tp.BackgroundTransparency = 1.000
+Tp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Tp.BorderSizePixel = 0
+Tp.Position = UDim2.new(0, 0, 1.06910574, 0)
+Tp.Size = UDim2.new(0, 89, 0, 45)
+Tp.ZIndex = 10
+Tp.Font = Enum.Font.Unknown
+Tp.Text = "Tp to"
+Tp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tp.TextSize = 14.000
+
+Mimic.Name = "Mimic"
+Mimic.Parent = Viewbox
+Mimic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Mimic.BackgroundTransparency = 1.000
+Mimic.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Mimic.BorderSizePixel = 0
+Mimic.Position = UDim2.new(0.550000012, 0, 1.06910574, 0)
+Mimic.Size = UDim2.new(0, 89, 0, 45)
+Mimic.ZIndex = 10
+Mimic.Font = Enum.Font.Unknown
+Mimic.Text = "Mimic?"
+Mimic.TextColor3 = Color3.fromRGB(255, 0, 0)
+Mimic.TextSize = 14.000
+
+Flight_2.Name = "Flight"
+Flight_2.Parent = SCCGUI
+Flight_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Flight_2.BackgroundTransparency = 1.000
+Flight_2.Position = UDim2.new(0, 725, 0, 450)
+Flight_2.Size = UDim2.new(0, 200, 0, 183)
+Flight_2.Visible = false
+Flight_2.Image = "rbxassetid://3570695787"
+Flight_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Flight_2.ImageTransparency = 0.500
+Flight_2.ScaleType = Enum.ScaleType.Slice
+Flight_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Flight_2.SliceScale = 0.120
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Flight_2
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BackgroundTransparency = 1.000
+Toggle.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0.0716259703, 0, 0.128361836, 0)
+Toggle.Size = UDim2.new(0, 171, 0, 57)
+Toggle.ZIndex = 10
+Toggle.Font = Enum.Font.Unknown
+Toggle.Text = "Toggle"
+Toggle.TextColor3 = Color3.fromRGB(255, 0, 4)
+Toggle.TextSize = 14.000
+
+ScrollingFrame_2.Parent = Flight_2
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.99662596, 0, 0.0123456791, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 39, 0, 188)
+ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 100, 0)
+ScrollingFrame_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+ScrollingFrame_2.ScrollBarThickness = 25
+
+Storage_2.Name = "Storage"
+Storage_2.Parent = SCCGUI
+Storage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Storage_2.BackgroundTransparency = 1.000
+Storage_2.Position = UDim2.new(0, 150, 0, 300)
+Storage_2.Size = UDim2.new(0, 983, 0, 609)
+Storage_2.Visible = false
+Storage_2.Image = "rbxassetid://3570695787"
+Storage_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Storage_2.ImageTransparency = 1.000
+Storage_2.ScaleType = Enum.ScaleType.Slice
+Storage_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Storage_2.SliceScale = 0.120
+
+Storage2.Name = "Storage2"
+Storage2.Parent = Storage_2
+Storage2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Storage2.BackgroundTransparency = 1.000
+Storage2.Position = UDim2.new(0, 41, 0, 0)
+Storage2.Size = UDim2.new(0, 983, 0, 609)
+Storage2.Image = "rbxassetid://3570695787"
+Storage2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Storage2.ImageTransparency = 0.500
+Storage2.ScaleType = Enum.ScaleType.Slice
+Storage2.SliceCenter = Rect.new(100, 100, 100, 100)
+Storage2.SliceScale = 0.120
+
+UIAspectRatioConstraint.Parent = Storage2
+UIAspectRatioConstraint.AspectRatio = 1.614
+
+Active2.Name = "Active2"
+Active2.Parent = Storage2
+Active2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Active2.BackgroundTransparency = 1.000
+Active2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Active2.BorderSizePixel = 0
+Active2.Position = UDim2.new(0.00610376429, 0, 0.0164203607, 0)
+Active2.Size = UDim2.new(0, 150, 0, 45)
+Active2.ZIndex = 10
+Active2.Font = Enum.Font.Unknown
+Active2.Text = "Active"
+Active2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Active2.TextSize = 14.000
+
+Badges.Name = "Badges"
+Badges.Parent = Storage2
+Badges.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Badges.BackgroundTransparency = 1.000
+Badges.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Badges.BorderSizePixel = 0
+Badges.Position = UDim2.new(0.172770441, 0, 0.0164203607, 0)
+Badges.Size = UDim2.new(0, 150, 0, 45)
+Badges.ZIndex = 10
+Badges.Font = Enum.Font.Unknown
+Badges.Text = "Badges"
+Badges.TextColor3 = Color3.fromRGB(255, 255, 255)
+Badges.TextSize = 14.000
+
+Copies.Name = "Copies"
+Copies.Parent = Storage2
+Copies.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Copies.BackgroundTransparency = 1.000
+Copies.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Copies.BorderSizePixel = 0
+Copies.Position = UDim2.new(0.339437097, 0, 0.0164203607, 0)
+Copies.Size = UDim2.new(0, 150, 0, 45)
+Copies.ZIndex = 10
+Copies.Font = Enum.Font.Unknown
+Copies.Text = "Copies"
+Copies.TextColor3 = Color3.fromRGB(255, 255, 255)
+Copies.TextSize = 14.000
+
+Equips.Name = "Equips"
+Equips.Parent = Storage2
+Equips.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Equips.BackgroundTransparency = 1.000
+Equips.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Equips.BorderSizePixel = 0
+Equips.Position = UDim2.new(0.673787773, 0, 0.0164203607, 0)
+Equips.Size = UDim2.new(0, 150, 0, 45)
+Equips.ZIndex = 10
+Equips.Font = Enum.Font.Unknown
+Equips.Text = "Equips"
+Equips.TextColor3 = Color3.fromRGB(255, 255, 255)
+Equips.TextSize = 14.000
+
+Dances.Name = "Dances"
+Dances.Parent = Storage2
+Dances.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Dances.BackgroundTransparency = 1.000
+Dances.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Dances.BorderSizePixel = 0
+Dances.Position = UDim2.new(0.506103754, 0, 0.0164203607, 0)
+Dances.Size = UDim2.new(0, 150, 0, 45)
+Dances.ZIndex = 10
+Dances.Font = Enum.Font.Unknown
+Dances.Text = "Dances"
+Dances.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dances.TextSize = 14.000
+
+Passive.Name = "Passive"
+Passive.Parent = Storage2
+Passive.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Passive.BackgroundTransparency = 1.000
+Passive.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Passive.BorderSizePixel = 0
+Passive.Position = UDim2.new(0.8404544, 0, 0.0164203607, 0)
+Passive.Size = UDim2.new(0, 150, 0, 45)
+Passive.ZIndex = 10
+Passive.Font = Enum.Font.Unknown
+Passive.Text = "Passive"
+Passive.TextColor3 = Color3.fromRGB(255, 255, 255)
+Passive.TextSize = 14.000
+
+Toggles.Name = "Toggles"
+Toggles.Parent = Storage2
+Toggles.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggles.BackgroundTransparency = 1.000
+Toggles.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Toggles.BorderSizePixel = 0
+Toggles.Position = UDim2.new(0.590103805, 0, 0.107630536, 0)
+Toggles.Size = UDim2.new(0, 150, 0, 45)
+Toggles.ZIndex = 10
+Toggles.Font = Enum.Font.Unknown
+Toggles.Text = "Toggles"
+Toggles.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggles.TextSize = 14.000
+
+Skins.Name = "Skins"
+Skins.Parent = Storage2
+Skins.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Skins.BackgroundTransparency = 1.000
+Skins.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Skins.BorderSizePixel = 0
+Skins.Position = UDim2.new(0.42310375, 0, 0.107630536, 0)
+Skins.Size = UDim2.new(0, 150, 0, 45)
+Skins.ZIndex = 10
+Skins.Font = Enum.Font.Unknown
+Skins.Text = "Skins"
+Skins.TextColor3 = Color3.fromRGB(255, 255, 255)
+Skins.TextSize = 14.000
+
+Vanity.Name = "Vanity"
+Vanity.Parent = Storage2
+Vanity.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Vanity.BackgroundTransparency = 1.000
+Vanity.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Vanity.BorderSizePixel = 0
+Vanity.Position = UDim2.new(0.757103801, 0, 0.107630536, 0)
+Vanity.Size = UDim2.new(0, 150, 0, 45)
+Vanity.ZIndex = 10
+Vanity.Font = Enum.Font.Unknown
+Vanity.Text = "Vanity"
+Vanity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Vanity.TextSize = 14.000
+
+Potions.Name = "Potions"
+Potions.Parent = Storage2
+Potions.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Potions.BackgroundTransparency = 1.000
+Potions.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Potions.BorderSizePixel = 0
+Potions.Position = UDim2.new(0.0891037583, 0, 0.107630536, 0)
+Potions.Size = UDim2.new(0, 150, 0, 45)
+Potions.ZIndex = 10
+Potions.Font = Enum.Font.Unknown
+Potions.Text = "Potions"
+Potions.TextColor3 = Color3.fromRGB(255, 255, 255)
+Potions.TextSize = 14.000
+
+RareVanity.Name = "RareVanity"
+RareVanity.Parent = Storage2
+RareVanity.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RareVanity.BackgroundTransparency = 1.000
+RareVanity.BorderColor3 = Color3.fromRGB(255, 255, 255)
+RareVanity.BorderSizePixel = 0
+RareVanity.Position = UDim2.new(0.256103754, 0, 0.107630536, 0)
+RareVanity.Size = UDim2.new(0, 150, 0, 45)
+RareVanity.ZIndex = 10
+RareVanity.Font = Enum.Font.Unknown
+RareVanity.Text = "RareVanity"
+RareVanity.TextColor3 = Color3.fromRGB(255, 255, 255)
+RareVanity.TextSize = 14.000
+
+ScrollingFrame_3.Parent = Storage2
+ScrollingFrame_3.Active = true
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_3.BackgroundTransparency = 1.000
+ScrollingFrame_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_3.BorderSizePixel = 0
+ScrollingFrame_3.Position = UDim2.new(-0.0335707031, 0, 0.180623978, 0)
+ScrollingFrame_3.Size = UDim2.new(0, 1001, 0, 499)
+ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 3.20000005, 0)
+ScrollingFrame_3.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIGridLayout_2.Parent = ScrollingFrame_3
+UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+getitem.Name = "getitem"
+getitem.Parent = Storage2
+getitem.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+getitem.BackgroundTransparency = 1.000
+getitem.Size = UDim2.new(1, 0, 1, 0)
+getitem.SizeConstraint = Enum.SizeConstraint.RelativeYY
+getitem.Visible = false
+getitem.Image = "rbxassetid://2858581395"
+
+ViewportFrame.BackgroundTransparency = 1.000
+ViewportFrame.AnchorPoint = Vector2.new(0.5, 0)
+ViewportFrame.BackgroundColor3 = Color3.fromRGB(91, 72, 60)
+ViewportFrame.BorderSizePixel = 0
+ViewportFrame.Parent = getitem
+ViewportFrame.Position = UDim2.new(0.5, 0, 0.100000001, 0)
+ViewportFrame.ZIndex = 2
+
+inspector.Name = "inspector"
+inspector.Parent = Storage_2
+inspector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+inspector.BackgroundTransparency = 1.000
+inspector.Position = UDim2.new(0, 1030, 0, 0)
+inspector.Size = UDim2.new(0, 300, 0, 609)
+inspector.Image = "rbxassetid://3570695787"
+inspector.ImageColor3 = Color3.fromRGB(0, 0, 0)
+inspector.ImageTransparency = 0.500
+inspector.ScaleType = Enum.ScaleType.Slice
+inspector.SliceCenter = Rect.new(100, 100, 100, 100)
+inspector.SliceScale = 0.120
+
+Quantity.Name = "Quantity"
+Quantity.Parent = inspector
+Quantity.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Quantity.BackgroundTransparency = 1.000
+Quantity.Position = UDim2.new(-0.0824014395, 0, 0.916829467, 0)
+Quantity.Size = UDim2.new(0, 200, 0, 50)
+Quantity.Font = Enum.Font.Unknown
+Quantity.Text = "Quantity"
+Quantity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Quantity.TextSize = 14.000
+
+Item.Name = "Item"
+Item.Parent = inspector
+Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Item.BackgroundTransparency = 1.000
+Item.Position = UDim2.new(-0.0835483819, 0, -0.000245962292, 0)
+Item.Size = UDim2.new(0, 200, 0, 50)
+Item.Font = Enum.Font.Unknown
+Item.Text = "Item"
+Item.TextColor3 = Color3.fromRGB(255, 255, 255)
+Item.TextSize = 14.000
+
+qcheck.Name = "qcheck"
+qcheck.Parent = inspector
+qcheck.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+qcheck.BackgroundTransparency = 1.000
+qcheck.BorderColor3 = Color3.fromRGB(255, 255, 255)
+qcheck.BorderSizePixel = 0
+qcheck.Position = UDim2.new(0.584265113, 0, 0, 0)
+qcheck.Size = UDim2.new(0, 124, 0, 50)
+qcheck.ZIndex = 10
+qcheck.Font = Enum.Font.Unknown
+qcheck.Text = "Count"
+qcheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+qcheck.TextSize = 14.000
+
+With.Name = "With"
+With.Parent = inspector
+With.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+With.BackgroundTransparency = 1.000
+With.BorderColor3 = Color3.fromRGB(255, 255, 255)
+With.BorderSizePixel = 0
+With.Position = UDim2.new(0.0442650914, 0, 0.833333254, 0)
+With.Size = UDim2.new(0, 124, 0, 50)
+With.ZIndex = 10
+With.Font = Enum.Font.Unknown
+With.Text = "Withdraw 1"
+With.TextColor3 = Color3.fromRGB(255, 255, 255)
+With.TextSize = 14.000
+
+Desc.Name = "Desc"
+Desc.Parent = inspector
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.Position = UDim2.new(0.166451827, 0, 0.393842727, 0)
+Desc.Size = UDim2.new(0, 200, 0, 141)
+Desc.Font = Enum.Font.Unknown
+Desc.Text = "Desc"
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextSize = 14.000
+Desc.TextWrapped = true
+
+stackdrop.Name = "stackdrop"
+stackdrop.Parent = inspector
+stackdrop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+stackdrop.BackgroundTransparency = 1.000
+stackdrop.BorderColor3 = Color3.fromRGB(255, 255, 255)
+stackdrop.BorderSizePixel = 0
+stackdrop.Position = UDim2.new(0.540931761, 0, 0.833333254, 0)
+stackdrop.Size = UDim2.new(0, 124, 0, 50)
+stackdrop.ZIndex = 10
+stackdrop.Font = Enum.Font.Unknown
+stackdrop.Text = "Drop Stack"
+stackdrop.TextColor3 = Color3.fromRGB(255, 255, 255)
+stackdrop.TextSize = 14.000
+
+stacksize.Name = "stacksize"
+stacksize.Parent = inspector
+stacksize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+stacksize.BackgroundTransparency = 1.000
+stacksize.BorderColor3 = Color3.fromRGB(255, 255, 255)
+stacksize.BorderSizePixel = 0
+stacksize.Position = UDim2.new(0.544265091, 0, 0.917898178, 0)
+stacksize.Size = UDim2.new(0, 123, 0, 49)
+stacksize.Font = Enum.Font.Unknown
+stacksize.Text = "Stack Size"
+stacksize.TextColor3 = Color3.fromRGB(255, 255, 255)
+stacksize.TextSize = 14.000
+
+Frame.Parent = inspector
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0, 75, 0, 75)
+Frame.Size = UDim2.new(0, 150, 0, 150)
+
+UIGridLayout_3.Parent = Frame
+UIGridLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_3.CellSize = UDim2.new(0, 150, 0, 150)
+
+Filter.Name = "Filter"
+Filter.Parent = inspector
+Filter.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Filter.BackgroundTransparency = 1.000
+Filter.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Filter.BorderSizePixel = 0
+Filter.Position = UDim2.new(0.580931783, 0, 0.082101807, 0)
+Filter.Size = UDim2.new(0, 124, 0, 50)
+Filter.ZIndex = 10
+Filter.Font = Enum.Font.Unknown
+Filter.Text = "Filter?"
+Filter.TextColor3 = Color3.fromRGB(255, 0, 0)
+Filter.TextSize = 14.000
+
+Misc_2.Name = "Misc"
+Misc_2.Parent = SCCGUI
+Misc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc_2.BackgroundTransparency = 1.000
+Misc_2.Position = UDim2.new(0, 190, 0, 299)
+Misc_2.Size = UDim2.new(0, 983, 0, 609)
+Misc_2.Visible = false
+Misc_2.Image = "rbxassetid://3570695787"
+Misc_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Misc_2.ImageTransparency = 0.500
+Misc_2.ScaleType = Enum.ScaleType.Slice
+Misc_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Misc_2.SliceScale = 0.120
+
+Prog.Name = "Prog"
+Prog.Parent = Misc_2
+Prog.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Prog.BackgroundTransparency = 1.000
+Prog.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Prog.BorderSizePixel = 0
+Prog.Position = UDim2.new(0.0418317467, 0, 0.625043571, 0)
+Prog.Size = UDim2.new(0, 171, 0, 57)
+Prog.ZIndex = 10
+Prog.Font = Enum.Font.Unknown
+Prog.Text = "Progress Cavern"
+Prog.TextColor3 = Color3.fromRGB(255, 255, 255)
+Prog.TextSize = 14.000
+
+Nuke.Name = "Nuke"
+Nuke.Parent = Misc_2
+Nuke.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Nuke.BackgroundTransparency = 1.000
+Nuke.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Nuke.BorderSizePixel = 0
+Nuke.Position = UDim2.new(0.0479355119, 0, 0.746246278, 0)
+Nuke.Size = UDim2.new(0, 171, 0, 57)
+Nuke.ZIndex = 10
+Nuke.Font = Enum.Font.Unknown
+Nuke.Text = "Nuke Cavern"
+Nuke.TextColor3 = Color3.fromRGB(255, 255, 255)
+Nuke.TextSize = 14.000
+
+Save.Name = "Save"
+Save.Parent = Misc_2
+Save.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Save.BackgroundTransparency = 1.000
+Save.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Save.BorderSizePixel = 0
+Save.Position = UDim2.new(0.599683881, 0, 0.868954301, 0)
+Save.Size = UDim2.new(0, 171, 0, 57)
+Save.ZIndex = 10
+Save.Font = Enum.Font.Unknown
+Save.Text = "Save Settings"
+Save.TextColor3 = Color3.fromRGB(255, 255, 255)
+Save.TextSize = 14.000
+
+Reset.Name = "Reset"
+Reset.Parent = Misc_2
+Reset.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Reset.BackgroundTransparency = 1.000
+Reset.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Reset.BorderSizePixel = 0
+Reset.Position = UDim2.new(0.754529059, 0, 0.868954301, 0)
+Reset.Size = UDim2.new(0, 171, 0, 57)
+Reset.ZIndex = 10
+Reset.Font = Enum.Font.Unknown
+Reset.Text = "Reset Settings"
+Reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reset.TextSize = 14.000
+
+Load.Name = "Load"
+Load.Parent = Misc_2
+Load.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Load.BackgroundTransparency = 1.000
+Load.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Load.BorderSizePixel = 0
+Load.Position = UDim2.new(0.444838762, 0, 0.868954301, 0)
+Load.Size = UDim2.new(0, 171, 0, 57)
+Load.ZIndex = 10
+Load.Font = Enum.Font.Unknown
+Load.Text = "Load Settings"
+Load.TextColor3 = Color3.fromRGB(255, 255, 255)
+Load.TextSize = 14.000
+
+heal.Name = "heal"
+heal.Parent = Misc_2
+heal.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+heal.BackgroundTransparency = 1.000
+heal.BorderColor3 = Color3.fromRGB(255, 255, 255)
+heal.BorderSizePixel = 0
+heal.Position = UDim2.new(0.239186794, 0, 0.746862173, 0)
+heal.Size = UDim2.new(0, 171, 0, 57)
+heal.ZIndex = 10
+heal.Font = Enum.Font.Unknown
+heal.Text = "Health Toggle"
+heal.TextColor3 = Color3.fromRGB(255, 0, 0)
+heal.TextSize = 14.000
+
+ShopFrame.Name = "ShopFrame"
+ShopFrame.Parent = Misc_2
+ShopFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShopFrame.BackgroundTransparency = 1.000
+ShopFrame.Position = UDim2.new(0.0485303067, 0, 0.0536740534, 0)
+ShopFrame.Size = UDim2.new(0, 901, 0, 212)
+ShopFrame.Image = "rbxassetid://3570695787"
+ShopFrame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+ShopFrame.ImageTransparency = 0.500
+ShopFrame.ScaleType = Enum.ScaleType.Slice
+ShopFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+ShopFrame.SliceScale = 0.120
+
+TextButton.Name = ">"
+TextButton.Parent = ShopFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.530521631, 0, 1.26415086, 0)
+TextButton.Size = UDim2.new(0, 100, 0, 50)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = ">"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 35.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_2.Name = "<"
+TextButton_2.Parent = ShopFrame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.Position = UDim2.new(0.358490616, 0, 1.26415086, 0)
+TextButton_2.Size = UDim2.new(0, 100, 0, 50)
+TextButton_2.Font = Enum.Font.Unknown
+TextButton_2.Text = "<"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 35.000
+TextButton_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_3.Name = "<<"
+TextButton_3.Parent = ShopFrame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.Position = UDim2.new(0.247502834, 0, 1.26415086, 0)
+TextButton_3.Size = UDim2.new(0, 100, 0, 50)
+TextButton_3.Font = Enum.Font.Unknown
+TextButton_3.Text = "<<"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 35.000
+TextButton_3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_4.Name = "<<<"
+TextButton_4.Parent = ShopFrame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_4.BackgroundTransparency = 1.000
+TextButton_4.Position = UDim2.new(0.136515021, 0, 1.26415086, 0)
+TextButton_4.Size = UDim2.new(0, 100, 0, 50)
+TextButton_4.Font = Enum.Font.Unknown
+TextButton_4.Text = "<<<"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 35.000
+TextButton_4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_5.Name = ">>"
+TextButton_5.Parent = ShopFrame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_5.BackgroundTransparency = 1.000
+TextButton_5.Position = UDim2.new(0.641509414, 0, 1.26415086, 0)
+TextButton_5.Size = UDim2.new(0, 100, 0, 50)
+TextButton_5.Font = Enum.Font.Unknown
+TextButton_5.Text = ">>"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 35.000
+TextButton_5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton_6.Name = ">>>"
+TextButton_6.Parent = ShopFrame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_6.BackgroundTransparency = 1.000
+TextButton_6.Position = UDim2.new(0.752497196, 0, 1.26415086, 0)
+TextButton_6.Size = UDim2.new(0, 100, 0, 50)
+TextButton_6.Font = Enum.Font.Unknown
+TextButton_6.Text = ">>>"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 35.000
+TextButton_6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Date.Name = "Date"
+Date.Parent = ShopFrame
+Date.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Date.BackgroundTransparency = 1.000
+Date.Position = UDim2.new(0.388457268, 0, 1, 0)
+Date.Size = UDim2.new(0, 200, 0, 50)
+Date.Font = Enum.Font.Unknown
+Date.Text = "Date"
+Date.TextColor3 = Color3.fromRGB(255, 255, 255)
+Date.TextSize = 14.000
+
+ItemFrame.Name = "ItemFrame"
+ItemFrame.Parent = Misc_2
+ItemFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ItemFrame.BackgroundTransparency = 1.000
+ItemFrame.Position = UDim2.new(0.0485303067, 0, 0.0526477806, 0)
+ItemFrame.Size = UDim2.new(0, 901, 0, 212)
+ItemFrame.Image = "rbxassetid://3570695787"
+ItemFrame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+ItemFrame.ImageTransparency = 1.000
+ItemFrame.ScaleType = Enum.ScaleType.Slice
+ItemFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+ItemFrame.SliceScale = 0.120
+
+UIGridLayout_4.Parent = ItemFrame
+UIGridLayout_4.FillDirection = Enum.FillDirection.Vertical
+UIGridLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+
+LoadFrame.Name = "LoadFrame"
+LoadFrame.Parent = Misc_2
+LoadFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadFrame.BackgroundTransparency = 1.000
+LoadFrame.Position = UDim2.new(0.421055019, 0, 0.619437039, 0)
+LoadFrame.Size = UDim2.new(0, 534, 0, 139)
+LoadFrame.Image = "rbxassetid://3570695787"
+LoadFrame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+LoadFrame.ImageTransparency = 0.500
+LoadFrame.ScaleType = Enum.ScaleType.Slice
+LoadFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+LoadFrame.SliceScale = 0.120
+
+Y.Name = "Y"
+Y.Parent = LoadFrame
+Y.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Y.BackgroundTransparency = 1.000
+Y.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Y.BorderSizePixel = 0
+Y.Position = UDim2.new(0.0660079941, 0, 0.188906252, 0)
+Y.Size = UDim2.new(0, 80, 0, 80)
+Y.ZIndex = 10
+Y.Font = Enum.Font.Unknown
+Y.Text = "Y"
+Y.TextColor3 = Color3.fromRGB(255, 255, 0)
+Y.TextSize = 14.000
+
+B.Name = "B"
+B.Parent = LoadFrame
+B.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+B.BackgroundTransparency = 1.000
+B.BorderColor3 = Color3.fromRGB(255, 255, 255)
+B.BorderSizePixel = 0
+B.Position = UDim2.new(0.243910611, 0, 0.188906252, 0)
+B.Size = UDim2.new(0, 80, 0, 80)
+B.ZIndex = 10
+B.Font = Enum.Font.Unknown
+B.Text = "B"
+B.TextColor3 = Color3.fromRGB(0, 5, 255)
+B.TextSize = 14.000
+
+R.Name = "R"
+R.Parent = LoadFrame
+R.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+R.BackgroundTransparency = 1.000
+R.BorderColor3 = Color3.fromRGB(255, 255, 255)
+R.BorderSizePixel = 0
+R.Position = UDim2.new(0.42181325, 0, 0.188906252, 0)
+R.Size = UDim2.new(0, 80, 0, 80)
+R.ZIndex = 10
+R.Font = Enum.Font.Unknown
+R.Text = "R"
+R.TextColor3 = Color3.fromRGB(255, 0, 0)
+R.TextSize = 14.000
+
+G.Name = "G"
+G.Parent = LoadFrame
+G.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+G.BackgroundTransparency = 1.000
+G.BorderColor3 = Color3.fromRGB(255, 255, 255)
+G.BorderSizePixel = 0
+G.Position = UDim2.new(0.599715889, 0, 0.188906252, 0)
+G.Size = UDim2.new(0, 80, 0, 80)
+G.ZIndex = 10
+G.Font = Enum.Font.Unknown
+G.Text = "G"
+G.TextColor3 = Color3.fromRGB(0, 255, 0)
+G.TextSize = 14.000
+
+H.Name = "H"
+H.Parent = LoadFrame
+H.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+H.BackgroundTransparency = 1.000
+H.BorderColor3 = Color3.fromRGB(255, 255, 255)
+H.BorderSizePixel = 0
+H.Position = UDim2.new(0.768255234, 0, 0.188906252, 0)
+H.Size = UDim2.new(0, 80, 0, 80)
+H.ZIndex = 10
+H.Font = Enum.Font.Unknown
+H.Text = "H"
+H.TextColor3 = Color3.fromRGB(125, 0, 255)
+H.TextSize = 14.000
+
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = Misc_2
+Toggle_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.BackgroundTransparency = 1.000
+Toggle_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_2.BorderSizePixel = 0
+Toggle_2.Position = UDim2.new(0.239186794, 0, 0.625043511, 0)
+Toggle_2.Size = UDim2.new(0, 171, 0, 57)
+Toggle_2.ZIndex = 10
+Toggle_2.Font = Enum.Font.Unknown
+Toggle_2.Text = "Server Lag Toggle"
+Toggle_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Toggle_2.TextSize = 14.000
+
+Entity_2.Name = "Entity"
+Entity_2.Parent = SCCGUI
+Entity_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Entity_2.BackgroundTransparency = 1.000
+Entity_2.Position = UDim2.new(0, 190, 0, 299)
+Entity_2.Size = UDim2.new(0, 983, 0, 609)
+Entity_2.Visible = false
+Entity_2.Image = "rbxassetid://3570695787"
+Entity_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Entity_2.ImageTransparency = 0.500
+Entity_2.ScaleType = Enum.ScaleType.Slice
+Entity_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Entity_2.SliceScale = 0.120
+
+KAE.Name = "KAE"
+KAE.Parent = Entity_2
+KAE.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KAE.BackgroundTransparency = 1.000
+KAE.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KAE.BorderSizePixel = 0
+KAE.Position = UDim2.new(0.0217785686, 0, 0.0265555978, 0)
+KAE.Size = UDim2.new(0, 171, 0, 57)
+KAE.ZIndex = 10
+KAE.Font = Enum.Font.Unknown
+KAE.Text = "Kill All Enemies"
+KAE.TextColor3 = Color3.fromRGB(255, 255, 255)
+KAE.TextSize = 14.000
+
+Pickup.Name = "Pickup"
+Pickup.Parent = Entity_2
+Pickup.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Pickup.BackgroundTransparency = 1.000
+Pickup.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Pickup.BorderSizePixel = 0
+Pickup.Position = UDim2.new(0.0217785686, 0, 0.264650822, 0)
+Pickup.Size = UDim2.new(0, 171, 0, 57)
+Pickup.ZIndex = 10
+Pickup.Font = Enum.Font.Unknown
+Pickup.Text = "Store All Items"
+Pickup.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pickup.TextSize = 14.000
+
+PickupF.Name = "PickupF"
+PickupF.Parent = Entity_2
+PickupF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PickupF.BackgroundTransparency = 1.000
+PickupF.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PickupF.BorderSizePixel = 0
+PickupF.Position = UDim2.new(0.0217785686, 0, 0.391087592, 0)
+PickupF.Size = UDim2.new(0, 171, 0, 57)
+PickupF.ZIndex = 10
+PickupF.Font = Enum.Font.Unknown
+PickupF.Text = "Store All Filter Items"
+PickupF.TextColor3 = Color3.fromRGB(255, 255, 255)
+PickupF.TextSize = 14.000
+
+Etog.Name = "Etog"
+Etog.Parent = Entity_2
+Etog.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Etog.BackgroundTransparency = 1.000
+Etog.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Etog.BorderSizePixel = 0
+Etog.Position = UDim2.new(0.0217785686, 0, 0.611120462, 0)
+Etog.Size = UDim2.new(0, 171, 0, 57)
+Etog.ZIndex = 10
+Etog.Font = Enum.Font.Unknown
+Etog.Text = "ESP Toggle"
+Etog.TextColor3 = Color3.fromRGB(255, 0, 0)
+Etog.TextSize = 14.000
+
+ScrollingFrame_4.Parent = Entity_2
+ScrollingFrame_4.Active = true
+ScrollingFrame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_4.BackgroundTransparency = 1.000
+ScrollingFrame_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_4.BorderSizePixel = 0
+ScrollingFrame_4.Position = UDim2.new(0.216683626, 0, 0.0265556052, 0)
+ScrollingFrame_4.Size = UDim2.new(0, 754, 0, 571)
+ScrollingFrame_4.CanvasSize = UDim2.new(0, 0, 3.20000005, 0)
+ScrollingFrame_4.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIGridLayout_5.Parent = ScrollingFrame_4
+UIGridLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIGridLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+
+inspector_2.Name = "inspector"
+inspector_2.Parent = Entity_2
+inspector_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+inspector_2.BackgroundTransparency = 1.000
+inspector_2.Position = UDim2.new(0, 1012, 0, 0)
+inspector_2.Size = UDim2.new(0, 300, 0, 295)
+inspector_2.Image = "rbxassetid://3570695787"
+inspector_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+inspector_2.ImageTransparency = 0.500
+inspector_2.ScaleType = Enum.ScaleType.Slice
+inspector_2.SliceCenter = Rect.new(100, 100, 100, 100)
+inspector_2.SliceScale = 0.120
+
+Enemy.Name = "Enemy"
+Enemy.Parent = inspector_2
+Enemy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Enemy.BackgroundTransparency = 1.000
+Enemy.Position = UDim2.new(-0.0968817174, 0, 0.0506014936, 0)
+Enemy.Size = UDim2.new(0, 200, 0, 50)
+Enemy.Font = Enum.Font.Unknown
+Enemy.Text = "Enemy"
+Enemy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enemy.TextSize = 14.000
+
+Frame_2.Parent = inspector_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0, 75, 0, 75)
+Frame_2.Size = UDim2.new(0, 150, 0, 150)
+
+UIGridLayout_6.Parent = Frame_2
+UIGridLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_6.CellSize = UDim2.new(0, 150, 0, 150)
+
+Esp.Name = "Esp"
+Esp.Parent = inspector_2
+Esp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Esp.BackgroundTransparency = 1.000
+Esp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Esp.BorderSizePixel = 0
+Esp.Position = UDim2.new(0.527598441, 0, 0.0515933335, 0)
+Esp.Size = UDim2.new(0, 124, 0, 50)
+Esp.ZIndex = 10
+Esp.Font = Enum.Font.Unknown
+Esp.Text = "ESP?"
+Esp.TextColor3 = Color3.fromRGB(255, 0, 0)
+Esp.TextSize = 14.000
+
+Colorer.Name = "Colorer"
+Colorer.Parent = Entity_2
+Colorer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Colorer.BackgroundTransparency = 1.000
+Colorer.Position = UDim2.new(0, 1012, 0, 314)
+Colorer.Size = UDim2.new(0, 300, 0, 295)
+Colorer.Image = "rbxassetid://3570695787"
+Colorer.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Colorer.ImageTransparency = 0.500
+Colorer.ScaleType = Enum.ScaleType.Slice
+Colorer.SliceCenter = Rect.new(100, 100, 100, 100)
+Colorer.SliceScale = 0.120
+
+Color.Name = "Color"
+Color.Parent = Colorer
+Color.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Color.BackgroundTransparency = 1.000
+Color.Position = UDim2.new(-0.0968817174, 0, 0.0506014936, 0)
+Color.Size = UDim2.new(0, 200, 0, 50)
+Color.Font = Enum.Font.Unknown
+Color.Text = "Esp Color"
+Color.TextColor3 = Color3.fromRGB(255, 255, 255)
+Color.TextSize = 14.000
+
+B_2.Name = "B"
+B_2.Parent = Colorer
+B_2.Active = true
+B_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+B_2.BackgroundTransparency = 1.000
+B_2.BorderSizePixel = 0
+B_2.Position = UDim2.new(0.719959259, 0, 0.269972801, 0)
+B_2.Size = UDim2.new(0, 39, 0, 188)
+B_2.CanvasSize = UDim2.new(0, 0, 255, 0)
+B_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+B_2.ScrollBarThickness = 25
+
+G_2.Name = "G"
+G_2.Parent = Colorer
+G_2.Active = true
+G_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+G_2.BackgroundTransparency = 1.000
+G_2.BorderSizePixel = 0
+G_2.Position = UDim2.new(0.436625928, 0, 0.269972801, 0)
+G_2.Size = UDim2.new(0, 39, 0, 188)
+G_2.CanvasSize = UDim2.new(0, 0, 255, 0)
+G_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+G_2.ScrollBarThickness = 25
+
+R_2.Name = "R"
+R_2.Parent = Colorer
+R_2.Active = true
+R_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+R_2.BackgroundTransparency = 1.000
+R_2.BorderSizePixel = 0
+R_2.Position = UDim2.new(0.169959247, 0, 0.269972801, 0)
+R_2.Size = UDim2.new(0, 39, 0, 188)
+R_2.CanvasSize = UDim2.new(0, 0, 255, 0)
+R_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+R_2.ScrollBarThickness = 25
+
+Set.Name = "Set"
+Set.Parent = Colorer
+Set.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Set.BackgroundTransparency = 1.000
+Set.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Set.BorderSizePixel = 0
+Set.Position = UDim2.new(0.567598462, 0, 0.0482035019, 0)
+Set.Size = UDim2.new(0, 124, 0, 50)
+Set.ZIndex = 10
+Set.Font = Enum.Font.Unknown
+Set.Text = "Set Color"
+Set.TextColor3 = Color3.fromRGB(255, 255, 255)
+Set.TextSize = 14.000
+
+InviStorage.Name = "InviStorage"
+InviStorage.Parent = SCCGUI
+InviStorage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InviStorage.Size = UDim2.new(0, 100, 0, 100)
+InviStorage.Visible = false
+InviStorage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+roundify.Name = "roundify"
+roundify.Parent = InviStorage
+roundify.Active = true
+roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+roundify.BackgroundTransparency = 1.000
+roundify.Position = UDim2.new(0.5, 0, 0.5, 0)
+roundify.Selectable = true
+roundify.Size = UDim2.new(1, 0, 1, 0)
+roundify.Image = "rbxassetid://3570695787"
+roundify.ImageColor3 = Color3.fromRGB(0, 0, 0)
+roundify.ImageTransparency = 0.800
+roundify.ScaleType = Enum.ScaleType.Slice
+roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+roundify.SliceScale = 0.120
+
+-- Scripts:
+
+local function RCLZ_fake_script() -- SCCGUI.Main 
+	local script = Instance.new('LocalScript', SCCGUI)
+
+	--Common Vars--
+	LP = game.Players.LocalPlayer
+	_G = getrenv()._G
+	GUI = script.Parent
+	Fakes = workspace.Entity.Fakes
+	col = game:GetService("Workspace").Entity.Debris.col
+	
+	--Bools
+	--storage
+	dropstacking = false
+	countitems = false
+	canthing = false
+	witem = false
+	
+	--flight
+	check = false
+	
+	--Entity
+	esptoggled = false
+	
+	--Playeri
+	canmim = false
+	
+	--Misc
+	crashtheserver = false
+	healplayer = false
+	
+	--Ints
+	--storage
+	invslotcounter = 20
+	itemslot = 20
+	dropslot = 20
+	itemtimer = 5
+	quantity = 0
+	droptime = 0
+	
+	--flight
+	flycanva = 0
+	
+	--Entity
+	slotcount = 20
+	R = 0
+	G = 0
+	B = 0
+	
+	--Misc
+	currentday = os.time() / 86400
+	
+	--Strings
+	--Playeri
+	currentplayer = ""
+	
+	--Array
+	--storage
+	invtable = {}
+	droptab = {}
+	FilteredItems = {}
+	
+	--Entity
+	ESPEnemies = {}
+	EnemyColors = {}
+	
+	--Misc
+	Shop = {}
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Awesometomine/2-year-scc-shop-rotations/main/SCCSHOP.lua", true))()
+	
+	--Buttons
+	--storage
+	qc = GUI.Storage.inspector.qcheck
+	with = GUI.Storage.inspector.With
+	steal = GUI.Storage.inspector.Filter
+	stackdrop = GUI.Storage.inspector.stackdrop
+	
+	--flight
+	toggle = GUI.Flight.Toggle
+	speedbox = GUI.Flight.ScrollingFrame
+	
+	--Entity
+	espswitch = GUI.Entity.inspector.Esp
+	espbutton = GUI.Entity.Etog
+	killall = GUI.Entity.KAE
+	storeall = GUI.Entity.Pickup
+	storeallF = GUI.Entity.PickupF
+	SetCol = GUI.Entity.Colorer.Set
+	
+	--Playeri
+	TpTo = GUI.Playeri.Viewbox.Tp
+	Mimic = GUI.Playeri.Viewbox.Mimic
+	
+	--Misc
+	selv = GUI.Misc.ShopFrame["<"]
+	selvv = GUI.Misc.ShopFrame["<<"]
+	selvvv = GUI.Misc.ShopFrame["<<<"]
+	
+	selv2 = GUI.Misc.ShopFrame[">"]
+	selvv2 = GUI.Misc.ShopFrame[">>"]
+	selvvv2 = GUI.Misc.ShopFrame[">>>"]
+	
+	lagtog = GUI.Misc.Toggle
+	progress = GUI.Misc.Prog
+	bomball = GUI.Misc.Nuke
+	healtog = GUI.Misc.heal
+	
+	ButtonY = GUI.Misc.LoadFrame.Y
+	ButtonB = GUI.Misc.LoadFrame.B
+	ButtonR = GUI.Misc.LoadFrame.R
+	ButtonG = GUI.Misc.LoadFrame.G
+	ButtonH = GUI.Misc.LoadFrame.H
+	
+	loadtool = GUI.Misc.Load
+	savetool = GUI.Misc.Save
+	resetool = GUI.Misc.Reset
+	
+	--Vecs
+	--storage
+	pos = Vector3.new()
+	
+	--Services
+	UserInputService = game:GetService("UserInputService")
+	RunService = game:GetService("RunService")
+	Players = game:GetService("Players")
+	
+	--Modules
+	ui = require(LP.PlayerScripts.root.UI)
+	root = require(LP.PlayerScripts.root)
+	
+	--Main gui vars
+	canvis = true
+	isthedamnguiopen = false
+	Cooldown = false
+	CurentTab = nil
+	
+	Positions = {
+		["Playeri"] = UDim2.new(0, 150,0, 350),
+		["Playeri2"] = UDim2.new(0, -500,0, 350),
+		["Storage"] = UDim2.new(0, 150,0, 300),
+		["Storage2"] = UDim2.new(0, -1500,0, 300),
+		["Flight"] = UDim2.new(0, 725,0, 450),
+		["Flight2"] = UDim2.new(0, -500,0, 450),
+		["Misc"] = UDim2.new(0, 150,0, 300),
+		["Misc2"] = UDim2.new(0, -1500,0, 300),
+		["Entity"] = UDim2.new(0, 150,0, 300),
+		["Entity2"] = UDim2.new(0, -1500,0, 300),
+	}
+	
+	tabuttons = {
+		GUI.Tab.Storage,
+		GUI.Tab.Playeri,
+		GUI.Tab.Entity,
+		GUI.Tab.Flight,
+		GUI.Tab.Misc,
+	}
+	roundify = {
+		GUI.Entity.Etog,
+		GUI.Entity.KAE,
+		GUI.Entity.Pickup,
+		GUI.Entity.PickupF,
+		GUI.Entity.inspector.Esp,
+		GUI.Entity.Colorer.Set,
+		GUI.Flight.Toggle,
+		GUI.Playeri.ScrollingFrame.Template,
+		GUI.Playeri.Viewbox.Mimic,
+		GUI.Playeri.Viewbox.Tp,
+		GUI.Storage.Storage2.Active2,
+		GUI.Storage.Storage2.Badges,
+		GUI.Storage.Storage2.Copies,
+		GUI.Storage.Storage2.Dances,
+		GUI.Storage.Storage2.Equips,
+		GUI.Storage.Storage2.Passive,
+		GUI.Storage.Storage2.Potions,
+		GUI.Storage.Storage2.RareVanity,
+		GUI.Storage.Storage2.Skins,
+		GUI.Storage.Storage2.Toggles,
+		GUI.Storage.Storage2.Vanity,
+		GUI.Storage.inspector.Filter,
+		GUI.Storage.inspector.With,
+		GUI.Storage.inspector.qcheck,
+		GUI.Storage.inspector.stackdrop,
+		GUI.Tab.Storage,
+		GUI.Tab.Playeri,
+		GUI.Tab.Entity,
+		GUI.Tab.Flight,
+		GUI.Tab.Misc,
+		GUI.Misc.Toggle,
+		GUI.Misc.Prog,
+		GUI.Misc.Nuke,
+		GUI.Misc.heal,
+		GUI.Misc.LoadFrame.Y,
+		GUI.Misc.LoadFrame.B,
+		GUI.Misc.LoadFrame.R,
+		GUI.Misc.LoadFrame.G,
+		GUI.Misc.LoadFrame.H,
+		GUI.Misc.Load,
+		GUI.Misc.Save,
+		GUI.Misc.Reset,
+	}
+	
+	--FUNCTIONS
+	
+	--MetaTables
+	local mt = getrawmetatable(game)
+	local namecall = mt.__namecall
+	setreadonly(mt,false)
+	mt.__namecall = newcclosure(function(self, ...)
+		local args = {...}   
+		if getnamecallmethod() == 'FireServer' and self.Name == 'Plam' then
+			if not checkcaller() and canmim then
+				return
+			end
+		end
+		return namecall(self, table.unpack(args))
+	end)
+	setreadonly(mt,true)
+	
+	--Main gui functions
+	function buttonscripts()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.SCCGUI:GetDescendants()) do
+			if v.ClassName == "TextButton" and v.Parent ~= GUI.Tab and v.Parent ~= GUI.Misc.ShopFrame then
+				v.MouseButton1Down:Connect(function()
+					v.roundify.ImageColor3 = Color3.new(1, 1, 1)
+				end)
+				v.MouseButton1Up:Connect(function()
+					v.roundify.ImageColor3 = Color3.new(0, 0, 0)
+				end)
+				v.MouseLeave:Connect(function()
+					v.roundify.ImageColor3 = Color3.new(0, 0, 0)
+				end)
+			end
+		end	
+	end
+	
+	--Playeri
+	function refresh()
+		for i,v in pairs(GUI.Playeri.ScrollingFrame:GetChildren()) do
+			if v.Name ~= "UIGridLayout" then
+				if v.Text ~= "" then
+					v:Destroy()
+				end
+			end
+		end
+		for i,v in pairs(Players:GetChildren()) do
+			local clonetemp = GUI.Playeri.ScrollingFrame.Template:Clone()
+			clonetemp.Parent = GUI.Playeri.ScrollingFrame
+			clonetemp.Name = v.Name
+			clonetemp.Visible = true
+			if Players[v.Name].DisplayName ~= v.Name then
+				clonetemp.Text = Players[v.Name].DisplayName.."\n" .. v.Name
+			else
+				clonetemp.Text = v.Name
+			end
+			clonetemp.MouseButton1Click:Connect(function()
+				currentplayer = clonetemp.Name
+				GUI.Playeri.Viewbox.PName.Text = clonetemp.Text
+				GUI.Playeri.Viewbox.Pfp.Image = game.Players:GetUserThumbnailAsync(Players[currentplayer].UserId, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size420x420)
+				GUI.Playeri.Viewbox.Pfp.Visible = true
+			end)
+		end
+		buttonscripts()
+	end
+	function round(n)
+		return math.floor(n + 0.5)
+	end
+	
+	--Storage
+	function invslot()
+		invslotcounter = invslotcounter + 1
+		if invslotcounter >= 80 then
+			invslotcounter = 20
+		end
+		return invslotcounter
+	end
+	function StorageClean(p54)
+		if p54 then
+			for v187, v188 in pairs(p54:GetChildren()) do
+				if v187 then
+	
+				else
+					break;
+				end;
+				local v186 = v187;
+				if v188.Name ~= "UIGridLayout" then
+					if v188.Name ~= "UIListLayout" then
+						v188:Destroy();
+					end;
+				end;		
+			end;
+		end;
+	end;
+	function MetaFromType(p25)
+		if p25 == 0 then
+			return root.char.items;
+		end;
+		if p25 == 1 then
+			return root.char.equips;
+		end;
+		if p25 ~= 2 then
+			return;
+		end;
+		return root.char.vanity;
+	end;
+	function canpickup()
+		for quant = 1, 8 do
+			if not root.char.items[quant] then
+				return true, quant
+			end
+		end
+	end
+	
+	--Misc
+	function updateshoptime(date)
+		for i, v in pairs(GUI.Misc.ItemFrame:GetChildren()) do
+			if v.ClassName == "ImageButton" then
+				v:Destroy()
+			end
+		end
+		local dayround = math.floor(date)
+		local daytext = ""
+		local time_table = os.date("*t", dayround * 86400)
+		daytext = daytext.. time_table.day.. " "
+		daytext = daytext.. time_table.month.. " "
+		daytext = daytext.. time_table.year
+		GUI.Misc.ShopFrame.Date.Text = daytext
+		if Shop[dayround] then
+			for i,v in pairs(Shop[dayround]) do
+				local v8 = LP.PlayerScripts.root.UI.getitem:Clone();
+				v8.Visible = true
+				v8.Parent = GUI.Misc.ItemFrame;
+				v8.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+				local v9 = ui.CopyItem(v, "debug");
+				if v9 then
+					v9.Parent = v8.ViewportFrame
+				else
+					v8:Destroy()
+				end
+			end
+		else
+			print("Date not saved: ".. dayround)
+		end
+	end
+	
+	--Hooks
+	hookfunction(ui.AddItem, function(arg1)
+	end)
+	hookfunction(ui.InvClick, function(p1, p2, p3)
+		local mft = MetaFromType(p1)
+		if ui.HasInventoryItem(mft, p2, p3) then
+			for i, v in pairs(mft) do
+				if v.obj.Name == p2 and i == p3 then
+					game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        
+						[1] = "AddStorage",        
+						[2] = v.obj,        
+						[3] = p3,    }})
+					table.insert(_G.root.char.storage, v.obj.Name);
+					v.owner = nil;
+					v:Unequip();
+					root.item_mod:Remove(v);
+					break;
+				end;
+			end;
+			ui.OpenStorage();
+			return;
+		end;
+	end)
+	hookfunction(ui.OpenStorage, function()
+		if not root.char.storageopening then
+			root.char.storageopening = true;
+			root.char.instorage = true;
+			root.char.storagehighlight = nil;
+			root.char.storageobjfix = nil;
+			local l__StorageFrame__189 = root.ui.StorageFrame;
+			l__StorageFrame__189.background.ImageTransparency = 1
+			l__StorageFrame__189.title.Text = ""
+			l__StorageFrame__189.close.Text = ""
+			l__StorageFrame__189.Position = UDim2.new(0, 700, 0, 750)
+			StorageClean(l__StorageFrame__189:FindFirstChild("inv"));
+			l__StorageFrame__189.Visible = true;
+			local l__storage__190 = root.char.passes.storage;
+			local l__itemtype__191 = root.char.itemtype;
+			local v192 = root.char:MetaFromType(l__itemtype__191);
+			local v193 = 0;
+			for v194, v195 in pairs(v192) do
+				v193 = v193 + 1;
+			end;
+			local v196 = math.min(1, 1 / (v193 / 5));
+			local v197, v198
+			if l__storage__190 then
+				v197 = 2.32;
+			else
+				v197 = 0;
+			end;
+			l__StorageFrame__189.store.CanvasSize = UDim2.new(0, 0, v197, 0);
+			if l__storage__190 then
+				v198 = 0.083;
+			else
+				v198 = 0.32;
+			end;
+			l__StorageFrame__189.store.UIGridLayout.CellSize = UDim2.new(0.2, 0, v198, 0);
+			if ui.IsConsole() then
+				root.GS.SelectedObject = l__StorageFrame__189.close;
+			end;
+			for v202, v203 in pairs(v192) do
+				if not v202 then
+					break;
+				end;
+				local v204 = LP.PlayerScripts.root.UI.getitem:Clone();
+				v204.Parent = l__StorageFrame__189.inv;
+				v204.Size = UDim2.new(v196, 0, v196, 0);
+				v204.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+				v204.LayoutOrder = math.min(v202, 0 + 1);
+				v204.MouseButton1Down:Connect(function()
+					ui.InvClick(l__itemtype__191, v203.obj.Name, v202);
+					if v203.obj.Name == GUI.Storage.inspector.Item.Text then
+						GUI.Storage.inspector.Quantity.Text = tonumber(GUI.Storage.inspector.Quantity.Text) + 1
+					end
+				end);
+				local v205 = ui.CopyItem(v203.obj.Name, "storage");
+				local u9 = root.item_mod.GetItemByObj(v203.obj);
+				v204.InputBegan:Connect(function()
+					root.char.storagehighlight = u9;
+					root.char.storageobjfix = nil;
+				end);
+				v204.InputEnded:Connect(function()
+					if root.char.storagehighlight == u9 then
+						root.char.storagehighlight = nil;
+						root.char.storageobjfix = nil;
+					end;
+				end);
+				if v205 then
+					ui.ItemSize(v205);
+					v205.Parent = v204.ViewportFrame;
+				end;
+				if 0 == 1 and ui.IsConsole() then
+					root.GS.SelectedObject = v204;
+				end;		
+			end;
+	
+			for v213, v214 in pairs(l__StorageFrame__189.inv:GetChildren()) do
+				if v214.Name ~= "UIListLayout" then
+					local l__LayoutOrder__215 = v214.LayoutOrder;
+					v214.NextSelectionLeft = l__StorageFrame__189.inv:FindFirstChild(l__LayoutOrder__215 - 1);
+					v214.NextSelectionRight = l__StorageFrame__189.inv:FindFirstChild(l__LayoutOrder__215 + 1);
+					v214.NextSelectionUp = l__StorageFrame__189.store:FindFirstChild("1");
+				end;
+			end;
+			l__StorageFrame__189.inv.UIListLayout:ApplyLayout();
+			l__StorageFrame__189.store.UIGridLayout:ApplyLayout();
+			root.char.storageopening = false;
+		end;
+	end)
+	
+	--BUTTONS
+	
+	--Storage
+	with.MouseButton1Down:Connect(function()
+		local canpick, slot = canpickup()
+		if dropstacking == false and countitems == false and GUI.Storage.inspector.Quantity.Text ~= "0" and GUI.Storage.inspector.Quantity.Text ~= "quantity" and canpick then
+			witem = true
+			root.server_mod.AddPacket("SubStorage", GUI.Storage.inspector.Item.Text, -1)
+			pos = game:GetService("Workspace").Entity.Debris.col.Position
+			game:GetService("Workspace").Entity.Debris.col.Position = Vector3.new(171.5, 10.7652, 190.5)
+		end
+	end)
+	stackdrop.MouseButton1Click:Connect(function()
+		local num = tonumber(GUI.Storage.inspector.stacksize.Text)
+		if num and witem == false and countitems == false and dropstacking == false then
+			local outocome = tonumber(GUI.Storage.inspector.Quantity.Text) - num
+			if outocome >= 0 then
+				dropstacking = true
+				for counter = 1, num do
+					root.server_mod.AddPacket("SubStorage", GUI.Storage.inspector.Item.Text, -1)  
+				end
+				spawn(function()
+					wait(2)
+					repeat
+						droptime = droptime - 1
+						task.wait()
+					until droptime <= 0
+					dropstacking = false
+				end)
+				while dropstacking do
+					wait()
+				end
+				dropstacking = true
+				for i, v in pairs(droptab) do
+					game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        
+						[1] = "DropItem",        
+						[2] = v,        
+						[3] = i,    }})
+				end
+				dropstacking = false
+				droptab = {}
+				dropslot = 20
+			end
+		end
+	end)
+	steal.MouseButton1Click:Connect(function()
+		if GUI.Storage.inspector.Item.Text ~= "Item" then
+			if steal.TextColor3 == Color3.new(1, 0, 0) then
+				steal.TextColor3 = Color3.new(0, 1, 0)
+				FilteredItems[GUI.Storage.inspector.Item.Text] = true
+			else
+				FilteredItems[GUI.Storage.inspector.Item.Text] = false
+				steal.TextColor3 = Color3.new(1, 0, 0)
+			end
+		end
+	
+	end)
+	qc.MouseButton1Click:Connect(function()
+		if GUI.Storage.inspector.Item.Text ~= "Item" and countitems == false and witem == false and dropstacking == false then
+			countitems = true
+			quantity = 0
+			itemtimer = 5
+			GUI.Storage.inspector.Quantity.TextColor3 = Color3.new(1, 0, 0)
+			GUI.Storage.inspector.Quantity.Text = 0
+			spawn(function()
+				wait(2)
+				repeat
+					itemtimer = itemtimer - 1
+					task.wait()
+				until itemtimer <= 0
+				countitems = false
+				GUI.Storage.inspector.Quantity.Text = tostring(quantity)
+				quantity = 0
+			end)
+			while countitems do
+				wait()
+			end
+			local waitime = 0
+			for i, v in pairs(invtable) do
+				root.server_mod.AddPacket("AddStorage", v, i)
+				waitime = waitime + 0.006
+			end
+			GUI.Storage.inspector.Quantity.TextColor3 = Color3.new(0, 0, 1)
+			task.wait(waitime)
+			GUI.Storage.inspector.Quantity.TextColor3 = Color3.new(0, 1, 0)
+			invtable = {}
+			itemslot = 20
+			itemtimer = 5
+		end
+	end)
+	
+	--Entity
+	SetCol.MouseButton1Click:Connect(function()
+		R = ((GUI.Entity.Colorer.R.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.R.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.R.CanvasPosition.Y - 294.2627450980392)) / 29.42627450980392
+		G = ((GUI.Entity.Colorer.G.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.G.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.G.CanvasPosition.Y - 294.2627450980392)) / 29.42627450980392
+		B = ((GUI.Entity.Colorer.B.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.B.CanvasPosition.Y - 294.2627450980392) - (GUI.Entity.Colorer.B.CanvasPosition.Y - 294.2627450980392)) / 29.42627450980392
+		print(R..G..B)
+		GUI.Entity.Colorer.Color.TextColor3 = Color3.new(R, G, B)
+		EnemyColors[GUI.Entity.inspector.Enemy.Text] = Color3.new(R, G, B)
+	end)
+	storeall.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace").Entity.Items:GetChildren()) do
+			v.Parent = nil
+			slotcount = slotcount + 1
+			if slotcount >= 80 then
+				slotcount = 20
+			end
+			root.server_mod.AddPacket("PickupItem", v, slotcount)
+			root.server_mod.AddPacket("AddStorage", v, slotcount)
+		end
+	end)
+	storeallF.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace").Entity.Items:GetChildren()) do
+			if FilteredItems[v.Name] then
+				v.Parent = nil
+				slotcount = slotcount + 1
+				if slotcount >= 80 then
+					slotcount = 20
+				end
+				root.server_mod.AddPacket("PickupItem", v, slotcount)
+				root.server_mod.AddPacket("AddStorage", v, slotcount)
+			end
+		end
+	end)
+	killall.MouseButton1Click:Connect(function()
+		root.fun.BombDamage(Vector3.new(), "bomb", 10000, 10000);
+	end)
+	espbutton.MouseButton1Click:Connect(function()
+		if espbutton.TextColor3 == Color3.new(1,0,0) then
+			espbutton.TextColor3 = Color3.new(0,1,0)
+			esptoggled = true
+		else
+			espbutton.TextColor3 = Color3.new(1,0,0)
+			esptoggled = false
+		end
+	end)
+	espswitch.MouseButton1Click:Connect(function()
+		if EnemyColors[GUI.Entity.inspector.Enemy.Text] then
+			if ESPEnemies[GUI.Entity.inspector.Enemy.Text] then
+				ESPEnemies[GUI.Entity.inspector.Enemy.Text] = false
+				espswitch.TextColor3 = Color3.new(1, 0, 0)
+			else
+				ESPEnemies[GUI.Entity.inspector.Enemy.Text] = true
+				espswitch.TextColor3 = Color3.new(0, 1, 0)
+			end
+		end
+	end)
+	
+	--Playeri
+	TpTo.MouseButton1Click:Connect(function()
+		if Fakes:FindFirstChild(currentplayer) then
+			col.CFrame = Fakes:FindFirstChild(currentplayer).HumanoidRootPart.CFrame
+		end
+	end)
+	Mimic.MouseButton1Click:Connect(function()
+		if Mimic.TextColor3 == Color3.new(1, 0, 0) and Fakes:FindFirstChild(currentplayer) then
+			Mimic.TextColor3 = Color3.new(0, 1, 0)
+			canmim = true
+			spawn(function()
+				repeat
+					wait(0.2)
+					local target = game.ASSETS.Assets.Plams[currentplayer]
+					game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({
+						[1] = {
+							[1] = "Plam",
+							[2] = {
+								["whipcolor"] = target.whipcolor.Value,
+								["lightness"] = target.lightness.Value,
+								["haircolor"] = target.haircolor.Value,
+								["shieldtrans"] = target.shieldtrans.Value,
+								["easycampoint"] = target.easycampoint.Value,
+								["glovestype"] = target.glovestype.Value,
+								["loading"] = target.loading.Value,
+								["ground"] = target.ground.Value,
+								["mytem"] = target.mytem.Value,
+								["hardcore"] = target.hardcore.Value,
+								["userid"] = target.userid.Value,
+								["horserot"] = target.horserot.Value,
+								["bootstype"] = target.bootstype.Value,
+								["movie"] = target.movie.Value,
+								["pos"] = target.pos.Value,
+								["smoothwings"] = target.smoothwings.Value,
+								["frame4"] = target.frame4.Value,
+								["holding_item"] = target.holding_item.Value,
+								["ammo"] = target.ammo.Value,
+								["cf"] = target.cf.Value,
+								["severed"] = target.severed.Value,
+								["shroom"] = target.shroom.Value,
+								["hair"] = target.hair.Value,
+								["itemtype"] = target.itemtype.Value,
+								["attack"] = target.attack.Value,
+								["light"] = target.light.Value,
+								["whippoint"] = target.whippoint.Value,
+								["jetpacking"] = target.jetpacking.Value,
+								["speed"] = target.speed.Value,
+								["skincolor"] = target.skincolor.Value,
+								["shroomsmooth"] = target.shroomsmooth.Value,
+								["jump"] = target.jump.Value,
+								["crouching"] = target.crouching.Value,
+								["dark"] = target.dark.Value,
+								["animspeed"] = target.animspeed.Value,
+								["heightboost"] = target.heightboost.Value,
+								["croucherp"] = target.croucherp.Value,
+								["animspeed4"] = target.animspeed4.Value,
+								["gliding"] = target.gliding.Value,
+								["frame"] = target.frame.Value,
+								["frame2"] = target.frame2.Value,
+								["pitch"] = target.pitch.Value,
+							},
+						},
+					})
+				until canmim == false
+			end)
+		elseif Fakes:FindFirstChild(currentplayer) then
+			Mimic.TextColor3 = Color3.new(1, 0, 0)
+			canmim = false
+		end
+	end)
+	
+	--Flight
+	toggle.TextColor3 = Color3.new(1,0,0)
+	toggle.MouseButton1Click:Connect(function()
+		if toggle.TextColor3 == Color3.new(1,0,0) then
+			toggle.TextColor3 = Color3.new(0,1,0)
+			check = true
+		else
+			toggle.TextColor3 = Color3.new(1,0,0)
+			check = false
+		end
+		_G.root.char.supspeed = check
+	end)
+	
+	--Misc
+	
+	ButtonY.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.PutMeInCoach:FireServer(table.unpack({
+			[1] = 1,
+			[2] = false,
+			[3] = false,
+		}))
+	end)
+	ButtonB.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.PutMeInCoach:FireServer(table.unpack({
+			[1] = 2,
+			[2] = false,
+			[3] = false,
+		}))
+	end)
+	ButtonR.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.PutMeInCoach:FireServer(table.unpack({
+			[1] = 3,
+			[2] = false,
+			[3] = false,
+		}))
+	end)
+	ButtonG.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.PutMeInCoach:FireServer(table.unpack({
+			[1] = 4,
+			[2] = false,
+			[3] = false,
+		}))
+	end)
+	ButtonH.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.PutMeInCoach:FireServer(table.unpack({
+			[1] = 8,
+			[2] = false,
+			[3] = false,
+		}))
+	end)
+	
+	selv.MouseButton1Click:Connect(function()
+		currentday = currentday - 1
+		updateshoptime(currentday)
+	end)
+	selvv.MouseButton1Click:Connect(function()
+		currentday = currentday - 7
+		updateshoptime(currentday)
+	end)
+	selvvv.MouseButton1Click:Connect(function()
+		currentday = currentday - 30
+		updateshoptime(currentday)
+	end)
+	
+	selv2.MouseButton1Click:Connect(function()
+		currentday = currentday + 1
+		updateshoptime(currentday)
+	end)
+	selvv2.MouseButton1Click:Connect(function()
+		currentday = currentday + 7
+		updateshoptime(currentday)
+	end)
+	selvvv2.MouseButton1Click:Connect(function()
+		currentday = currentday + 30
+		updateshoptime(currentday)
+	end)
+	
+	lagtog.MouseButton1Click:Connect(function()
+		if lagtog.TextColor3 == Color3.new(1,0,0) then
+			lagtog.TextColor3 = Color3.new(0,1,0)
+			crashtheserver = true
+		else
+			crashtheserver = false
+			lagtog.TextColor3 = Color3.new(1,0,0)
+		end
+	end)
+	healtog.MouseButton1Click:Connect(function()
+		if healtog.TextColor3 == Color3.new(1,0,0) then
+			healtog.TextColor3 = Color3.new(0,1,0)
+			healplayer = true
+		else
+			healplayer = false
+			healtog.TextColor3 = Color3.new(1,0,0)
+		end
+	end)
+	
+	progress.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    
+			[1] = {        
+				[1] = "Progress",        
+				[2] = game:GetService("Workspace").Entity.Interact:WaitForChild("spawn"),    },    
+		})
+	end)
+	
+	bomball.MouseButton1Click:Connect(function()
+		local counter = -300
+		local counter2 = -300
+		local counter3 = -300
+		while counter < 350 do
+			counter = counter + 40
+			while counter2 < 350 do
+				counter2 = counter2 + 40
+				while counter3 < 350 do
+					counter3 = counter3 + 40
+					game:GetService("ReplicatedStorage").Assets.Cake.Boom:FireServer(table.unpack({
+						[1] = Vector3.new(counter, counter2, counter3),
+						[2] = "nuke",
+						[3] = true,
+					}))
+				end
+				counter3 = -300
+			end
+			counter2 = -300
+		end
+	end)
+	loadtool.MouseButton1Click:Connect(function()
+		loadstring(readfile("SCC+.txt"))()
+	end)
+	savetool.MouseButton1Click:Connect(function()
+		local savetext = ""
+		savetext = savetext.. "speedbox.CanvasPosition = Vector2.new(0, ".. flycanva.. ")\n"
+		savetext = savetext.. "EnemyColors = {\n"
+		for i, v in pairs(EnemyColors) do
+			savetext = savetext.. "['".. i.. "'] = Color3.new(".. tostring(v).. "),\n"
+		end
+		savetext = savetext.. "}\n"
+		savetext = savetext.. "ESPEnemies = {\n"
+		for i, v in pairs(ESPEnemies) do
+			if v then
+				savetext = savetext.. "['".. i.. "'] = ".. tostring(v).. ",\n"
+				end
+		end
+		savetext = savetext.. "}\n"
+		savetext = savetext.. "FilteredItems = {\n"
+		for i, v in pairs(FilteredItems) do
+			if v then
+				savetext = savetext.. "['".. i.. "'] = ".. tostring(v).. ",\n"
+				end
+		end
+		savetext = savetext.. "}\n"
+		writefile("SCC+.txt",savetext)
+	end)
+	resetool.MouseButton1Click:Connect(function()
+		R = 0
+		G = 0
+		B = 0
+		EnemyColors = {}
+		ESPEnemies = {}
+		FilteredItems = {}
+		flycanva = 0
+	end)
+	
+	--INITS
+	spawn(function()
+		refresh()
+		task.wait()
+		buttonscripts()
+	end)
+	
+	--Main Gui inits
+	for i,v in pairs(roundify) do
+		local roundclone = GUI.InviStorage.roundify:Clone()
+		roundclone.Parent = v
+	end
+	for i, v in pairs(tabuttons) do
+		local roundclone = GUI.InviStorage.roundify:Clone()
+		roundclone.Parent = v
+		v.MouseButton1Down:Connect(function()
+			if CurentTab ~= v.Name and not Cooldown and v.Parent.Parent:FindFirstChild(v.Name).Visible == false then
+				Cooldown = true
+				local oldtab = CurentTab
+				if oldtab == "Storage" then
+					ui:CloseStorage()
+				end
+				spawn(function()
+					v.Parent.Parent:FindFirstChild(oldtab).Position = Positions[oldtab]
+					v.Parent.Parent:FindFirstChild(oldtab):TweenPosition(Positions[oldtab.. "2"],"InOut","Quint",1)
+					wait(1)
+					v.Parent.Parent:FindFirstChild(oldtab).Visible = false
+				end)
+				CurentTab = v.Name
+				spawn(function()
+					root.char.instorage = true
+					v.Parent.Parent:FindFirstChild(v.Name).Visible = true
+					v.Parent.Parent:FindFirstChild(v.Name).Position = Positions[v.Name.. "2"]
+					v.Parent.Parent:FindFirstChild(v.Name):TweenPosition(Positions[v.Name],"InOut","Quint",1)
+				end)
+				spawn(function()
+					wait(1)
+					Cooldown = false	
+					if CurentTab == "Storage" then
+						ui:OpenStorage()
+					end
+				end)
+			end
+			v.roundify.ImageColor3 = Color3.new(1, 1, 1)
+		end)
+		v.MouseButton1Up:Connect(function()
+			v.roundify.ImageColor3 = Color3.new(0, 0, 0)
+		end)
+		v.MouseLeave:Connect(function()
+			v.roundify.ImageColor3 = Color3.new(0, 0, 0)
+		end)
+	end
+	
+	---Entity
+	for v14, v15 in pairs(root.as.Enemies:GetChildren()) do
+		local v16 = LP.PlayerScripts.root.UI.getitem:Clone();
+		v16.Parent = GUI.Entity.ScrollingFrame;
+		v16.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+		local v17 = v15.Model:Clone();
+		v17.Parent = v16.ViewportFrame;
+		v17:SetPrimaryPartCFrame(CFrame.new());
+		v16.MouseButton1Click:Connect(function()
+			if GUI.Entity.inspector.Frame:FindFirstChild("getitem") then
+				GUI.Entity.inspector.Frame:FindFirstChild("getitem"):Destroy()
+			end
+			local v10 = v16:Clone();
+			v16.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+			v10.Parent = GUI.Entity.inspector.Frame
+			v10.Size = UDim2.new({0, 150}, {0, 150})
+			v10.Position = UDim2.new({0.02, 0, 0.236, 0})
+			GUI.Entity.inspector.Enemy.Text = v15.Name
+			if ESPEnemies[GUI.Entity.inspector.Enemy.Text] then
+				espswitch.TextColor3 = Color3.new(0, 1, 0)
+			else
+				espswitch.TextColor3 = Color3.new(1, 0, 0)
+			end
+			if EnemyColors[GUI.Entity.inspector.Enemy.Text] then
+				GUI.Entity.Colorer.Color.TextColor3 = EnemyColors[GUI.Entity.inspector.Enemy.Text]
+			else
+				GUI.Entity.Colorer.Color.TextColor3 = Color3.new(255, 255, 255)
+			end
+		end);
+	end;
+	
+	--Storage
+	for v2, v3 in pairs(GUI.Storage.Storage2:GetChildren()) do
+		if v3.ClassName == "TextButton" then
+			v3.MouseButton1Down:Connect(function()
+				for i, v in pairs(GUI.Storage.Storage2:GetChildren()) do
+					if v.ClassName == "TextButton" then
+						v.TextColor3 = Color3.new(255, 255, 255)
+					end
+				end
+				v3.TextColor3 = Color3.new(0,255,0)
+				for v4, v5 in pairs(GUI.Storage.Storage2.ScrollingFrame:GetChildren()) do
+					if v5.ClassName == "ImageButton" then
+						v5:Destroy();
+					end;
+				end;
+				for i, v in pairs(game:GetService("ReplicatedStorage").Assets.Items[v3.Text]:GetChildren()) do
+					local v8 = LP.PlayerScripts.root.UI.getitem:Clone();
+					v8.Visible = true
+					v8.Parent = GUI.Storage.Storage2.ScrollingFrame;
+					v8.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+					local v9 = ui.CopyItem(v.Name, "debug");
+					if v9 and v.Name ~= "coinbonus" and v.Name ~= "trapbomb" then
+						v9.Parent = v8.ViewportFrame;
+						v8.MouseButton1Click:Connect(function()
+							if not countitems then
+								if GUI.Storage.inspector.Frame:FindFirstChild("getitem") then
+									GUI.Storage.inspector.Frame:FindFirstChild("getitem"):Destroy()
+								end
+								local v10 = v8:Clone();
+								v8.ViewportFrame.CurrentCamera = root.ui.ItemCamera;
+								v10.Parent = GUI.Storage.inspector.Frame
+								v10.Size = UDim2.new({0, 150}, {0, 150})
+								v10.Position = UDim2.new({0.02, 0, 0.236, 0})
+								local desc1 = require(game:GetService("ReplicatedStorage").Assets.Items[v.Parent.Name][v.Name].ItemMod)
+								local desc2 = desc1.New(game:GetService("ReplicatedStorage").Assets.Items[v.Parent.Name][v.Name].handle)
+								GUI.Storage.inspector.Desc.Text = desc2.Desc
+								GUI.Storage.inspector.Item.Text = v.Name
+								GUI.Storage.inspector.Quantity.Text = "0"
+								if FilteredItems[GUI.Storage.inspector.Item.Text] then
+									steal.TextColor3 = Color3.new(0, 1, 0)
+								else
+									steal.TextColor3 = Color3.new(1, 0, 0)
+								end
+								GUI.Storage.inspector.Quantity.TextColor3 = Color3.new(1, 0, 0)
+							end
+						end);
+					else
+						v8:Destroy();
+					end;
+				end;
+			end);
+		end;
+	end;
+	
+	--Player Updates
+	Players.ChildAdded:Connect(function()
+		refresh()
+	end)
+	Players.ChildRemoved:Connect(function()
+		refresh()
+	end)
+	
+	--Plam Onclient
+	game:GetService("ReplicatedStorage").Assets.Cake.Plam.OnClientEvent:Connect(function(arg)
+		for i, v in pairs(arg) do
+			if v[5] then
+				if v[5] == "Storage" then
+					canthing = true
+				end
+			end
+			if v[2] and countitems and not witem then
+				if v[2].Name == GUI.Storage.inspector.Item.Text and v[1] == "AddItem" then
+					itemslot = itemslot + 1
+					itemtimer = itemtimer + 1
+					quantity = quantity + 1
+					root.server_mod.AddPacket("PickupItem", v[2], itemslot)
+					invtable[itemslot] = v[2]
+				end
+			elseif witem == true and canthing == true and v[1] == "AddItem" then
+				GUI.Storage.inspector.Quantity.Text = tonumber(GUI.Storage.inspector.Quantity.Text) - 1
+				ui.OpenStorage();
+				wait(.5)
+				ui:OpenStorage()
+				game:GetService("Workspace").Entity.Debris.col.Position = pos
+				canthing = false
+				witem = false
+			elseif dropstacking and v[1] == "AddItem" then
+				GUI.Storage.inspector.Quantity.Text = tonumber(GUI.Storage.inspector.Quantity.Text) - 1
+				droptime = droptime + 1
+				dropslot = dropslot + 1
+				root.server_mod.AddPacket("PickupItem", v[2], dropslot)
+				droptab[dropslot] = v[2]
+			end
+		end
+	end)
+	
+	--UserInputService
+	UserInputService.InputBegan:Connect(function(inputObject, gameProcessedEvent)
+		if UserInputService:GetFocusedTextBox() then
+			return;
+		end
+		if inputObject.KeyCode == Enum.KeyCode.P and canvis and not Cooldown then
+			canvis = false
+			isthedamnguiopen = not isthedamnguiopen
+			root.char.instorage = isthedamnguiopen
+			if isthedamnguiopen then
+				if CurentTab == "Storage" then
+					spawn(function()
+						wait(1)
+						ui:OpenStorage()
+					end)
+				end
+				spawn(function()
+					GUI.Tab.Position = UDim2.new(0, 50,0, -200)
+					GUI.Tab.Visible = true
+					GUI.Tab:TweenPosition(UDim2.new(0, 50,0, 90),"InOut","Quint",1)
+				end)
+				spawn(function()
+					GUI:FindFirstChild(CurentTab).Position = Positions[CurentTab.. "2"]
+					GUI:FindFirstChild(CurentTab).Visible = true
+					GUI:FindFirstChild(CurentTab):TweenPosition(Positions[CurentTab],"InOut","Quint",1)
+				end)
+			else
+				ui:CloseStorage()
+				spawn(function()
+					GUI.Tab:TweenPosition(UDim2.new(0, 50,0, -200),"InOut","Quint",1)
+					wait(1)
+					GUI.Tab.Visible = false
+				end)
+				spawn(function()
+					GUI:FindFirstChild(CurentTab):TweenPosition(Positions[CurentTab.. "2"],"InOut","Quint",1)
+					wait(1)
+					GUI:FindFirstChild(CurentTab).Visible = false
+				end)
+			end
+			wait(1)
+			canvis = true
+		end
+	end)
+	
+	--Runservice
+	RunService.Stepped:Connect(function()
+		if crashtheserver then
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+			game:GetService("ReplicatedStorage").Assets.Cake.Plam:FireServer({    [1] = {        [1] = "Bomb",        [2] = Vector3.new(),        [3] = Vector3.new(),        [4] = true,        [5] = true,        [6] = 1,    }})
+		end
+		if healplayer then
+			_G.root.char.HP = 100
+		end
+		if esptoggled then
+			for i,v in pairs(game.Workspace.Entity.Enemies:GetChildren()) do
+				if ESPEnemies[GUI.Entity.inspector.Enemy.Text] and not v:FindFirstChild("ESP") then
+					local a = Instance.new("BillboardGui",v)
+					a.Name = "ESP"
+					a.Size = UDim2.new(5,0, 5,0)
+					a.AlwaysOnTop = true
+					local b = Instance.new('TextLabel',a)
+					b.TextColor3 = EnemyColors[v.Name]
+					b.Size = UDim2.new(2,0,2,0)
+					b.BorderSizePixel = 0
+					b.TextSize = 10
+					b.Text = v.Name
+					b.BackgroundTransparency = 1
+				elseif v:FindFirstChild("ESP") and not ESPEnemies[GUI.Entity.inspector.Enemy.Text] then
+					v.ESP:Destroy()
+				end
+			end
+		end
+		if countitems then
+			root.server_mod.AddPacket("SubStorage", GUI.Storage.inspector.Item.Text, -1)  
+			GUI.Storage.inspector.Quantity.Text = tostring(quantity)
+		end
+		if Fakes:FindFirstChild(currentplayer) then
+			local x = tostring(round(Fakes:FindFirstChild(currentplayer).HumanoidRootPart.Position.X))
+			local y = tostring(round(Fakes:FindFirstChild(currentplayer).HumanoidRootPart.Position.Y))
+			local z = tostring(round(Fakes:FindFirstChild(currentplayer).HumanoidRootPart.Position.Z))
+			GUI.Playeri.Viewbox.Coords.Text = x.. ", "..y.. ", "..z
+		else
+			GUI.Playeri.Viewbox.Coords.Text =  "0, 0, 0"
+			GUI.Playeri.Viewbox.Pfp.Visible = false
+			GUI.Playeri.Viewbox.PName.Text = "Name"
+			canmim = false
+			Mimic.TextColor3 = Color3.new(1, 0, 0)
+		end
+		if check then
+			local canpos = speedbox.CanvasPosition.Y - 18112
+			local speed = (canpos - canpos - canpos) / 1811.2
+			flycanva = speedbox.CanvasPosition.Y
+			col.Anchored = true
+			if UserInputService:IsKeyDown(Enum.KeyCode.W) then
+				col.CFrame+=workspace.CurrentCamera.CFrame.LookVector*speed
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.S) then
+				col.CFrame-=workspace.CurrentCamera.CFrame.LookVector*speed
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.A) then
+				col.CFrame-=workspace.CurrentCamera.CFrame.RightVector*speed
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.D) then
+				col.CFrame+=workspace.CurrentCamera.CFrame.RightVector*speed
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+				col.CFrame-=Vector3.new(0,speed,0)
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.Space) then
+				col.CFrame+=Vector3.new(0,speed,0)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(RCLZ_fake_script)()
